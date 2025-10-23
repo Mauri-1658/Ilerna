@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contador simple</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* estilos mínimos para este contador */
+        .counter-box { max-width:420px; margin:60px auto; background:#fff; padding:20px; border-radius:8px; text-align:center; }
+        input[type=number]{ width:120px; padding:8px; font-size:1rem; }
+        .big { font-size:3rem; margin:20px 0; }
+        .controls { display:flex; gap:10px; justify-content:center; align-items:center; }
+    </style>
 </head>
 <body>
-    <h1>Exercise 3</h1>
+    <div class="counter-box">
+        <h1>Contador</h1>
+        <div class="controls">
+            <label for="start">Número:</label>
+            <input id="start" type="number" min="0" value="10">
+            <button id="startBtn" class="button">Iniciar</button>
+            <button id="stopBtn" class="button">Parar</button>
+            <button id="resetBtn" class="button">Reset</button>
+        </div>
+
+        <div id="display" class="big">10</div>
+    </div>
+
+    <script>
+        let interval = null;
+        const display = document.getElementById('display');
+        const startInput = document.getElementById('start');
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const resetBtn = document.getElementById('resetBtn');
+
+        function render(n){ display.textContent = n; }
+
+        startBtn.addEventListener('click', ()=>{
+            const val = Math.max(0, Math.floor(Number(startInput.value) || 0));
+            clearInterval(interval);
+            let cur = val;
+            render(cur);
+            interval = setInterval(()=>{
+                if (cur<=0){ clearInterval(interval); return; }
+                cur -= 1;
+                render(cur);
+            }, 1000);
+        });
+
+        stopBtn.addEventListener('click', ()=>{ clearInterval(interval); });
+        resetBtn.addEventListener('click', ()=>{ clearInterval(interval); const v = Math.max(0, Math.floor(Number(startInput.value)||0)); render(v); });
+    </script>
 </body>
 </html>
