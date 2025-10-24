@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 6 - Borrar una Cookie</title>
+    <title>Ejercicio 6 - Cookies</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Ejercicio 6: Borrar una Cookie</h1>
-        <p>Objetivo: modificar <code>receptor.php</code> para que muestre la cookie <code>centro</code> y luego la borre. Si la cookie no existe debe redirigir a <code>form.php</code>.</p>
-
+        <h1>Ejercicio 6 - Borrar una Cookie</h1>
+        <p>En este ejercicio se crea una cookie y luego se borra al visualizarla.</p>
+        
         <div class="actions">
-            <a class="button" href="form.php">Ir al formulario (form.php)</a>
+            <a class="button" href="form.php">Ir al Formulario</a>
         </div>
 
-        <div class="note">La segunda vez que cargues <code>receptor.php</code> después de haber mostrado la cookie, deberías ser redirigido al formulario aunque no haya expirado.</div>
+        <div class="note">
+            <p>Funcionamiento:</p>
+            <ol>
+                <li>En el formulario se crea una cookie llamada "centro"</li>
+                <li>Al ver la cookie en receptor.php, se muestra y se borra</li>
+                <li>La siguiente vez que accedas a receptor.php serás redirigido al formulario</li>
+            </ol>
+        </div>
     </div>
 </body>
 </html>
