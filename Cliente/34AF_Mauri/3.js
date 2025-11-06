@@ -47,6 +47,4 @@ const stringSeparadoPorComa = frutas.reduce((acumulador, fruta, indice) => {
     return indice === 0 ? fruta : `${acumulador}, ${fruta}`;
 }, "");
 
-// const stringSimple = frutas.join(", "); 
-
 console.log(`9. String de frutas separado por coma (reduce): "${stringSeparadoPorComa}"`); 

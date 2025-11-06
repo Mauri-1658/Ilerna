@@ -1,8 +1,8 @@
 // Archivo JavaScript 7
 let tareas = [
-    { id: 1, titulo: "Estudiar JavaScript", completada: false },
-    { id: 2, titulo: "Comprar pan", completada: true },
-    { id: 3, titulo: "Hacer ejercicio", completada: false }
+  { id: 1, titulo: "Estudiar JavaScript", completada: false },
+  { id: 2, titulo: "Comprar pan", completada: true },
+  { id: 3, titulo: "Hacer ejercicio", completada: false }
 ];
 
 // 1. generarId(arr)

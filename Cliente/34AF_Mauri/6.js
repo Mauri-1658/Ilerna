@@ -1,10 +1,10 @@
 // Archivo JavaScript 6
 let estudiantes = [
-    { nombre: "Ana", nota: 9 },
-    { nombre: "Luis", nota: 4 },
-    { nombre: "Marta", nota: 7 },
-    { nombre: "Pedro", nota: 5 },
-    { nombre: "Sara", nota: 9 }
+  { nombre: "Ana", nota: 9 },
+  { nombre: "Luis", nota: 4 },
+  { nombre: "Marta", nota: 7 },
+  { nombre: "Pedro", nota: 5 },
+  { nombre: "Sara", nota: 9 }
 ];
 
 console.log("--- Array de Estudiantes Inicial ---");

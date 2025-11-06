@@ -1,9 +1,9 @@
 // Archivo JavaScript 5
 let productos = [
-    { nombre: "Teclado", precio: 50, stock: 10 },
-    { nombre: "Ratón", precio: 20, stock: 0 }, // Sin stock
-    { nombre: "Monitor", precio: 200, stock: 5 },
-    { nombre: "USB", precio: 10, stock: 25 }
+  { nombre: "Teclado", precio: 50, stock: 10 },
+  { nombre: "Ratón", precio: 20, stock: 0 },
+  { nombre: "Monitor", precio: 200, stock: 5 },
+  { nombre: "USB", precio: 10, stock: 25 }
 ];
 
 // 1. Función productosConStock(arr)

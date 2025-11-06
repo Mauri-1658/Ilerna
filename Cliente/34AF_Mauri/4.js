@@ -15,9 +15,9 @@ console.log(`Array inicial: [${numbers}]`);
 console.log(`Suma final encadenada: ${finalSum}`); // Salida: 64
 
 let usuarios = [
-    {nombre: "Ana", edad: 23},
-    {nombre: "Luis", edad: 19},
-    {nombre: "Marta", edad: 30}
+  {nombre: "Ana", edad: 23},
+  {nombre: "Luis", edad: 19},
+  {nombre: "Marta", edad: 30}
 ];
 
 // 1. Filtra edad > 20
