@@ -1,67 +1,104 @@
-// Constantes para los elementos del DOM
-const zonaMouse = document.getElementById('zona-mouse');
-const inputTexto = document.getElementById('input-texto');
-const logList = document.getElementById('log');
-
 /**
- * Función Log: Añade un mensaje como un nuevo elemento <li> a la lista de log.
- * @param {string} mensaje - El texto a registrar.
+ * Añade un mensaje al registro de eventos en pantalla
+ * @param {string} mensaje - El texto del mensaje a mostrar en el log
  */
 function log(mensaje) {
-    const nuevoLi = document.createElement('li');
-    // Usa la hora actual para facilitar el seguimiento del orden
-    const tiempo = new Date().toLocaleTimeString();
-    nuevoLi.textContent = `[${tiempo}] ${mensaje}`;
-    logList.prepend(nuevoLi); // Añadir al principio para ver lo más reciente
+    const logList = document.getElementById('log');
+    const nuevoElemento = document.createElement('li');
+    nuevoElemento.textContent = mensaje;
+    logList.appendChild(nuevoElemento);
+    // Auto-scroll al último mensaje
+    logList.scrollTop = logList.scrollHeight;
 }
 
-// 1. mouseenter: Añade clase highlight y registra
-zonaMouse.addEventListener('mouseenter', (event) => {
-    zonaMouse.classList.add('highlight');
-    log("Ratón Entró");
-});
+/**
+ * Maneja el evento de entrada del ratón en la zona
+ * @param {MouseEvent} event - El objeto del evento de ratón
+ */
+function manejarMouseEnter(event) {
+    event.target.classList.add('highlight');
+    log('Ratón Entró');
+}
 
-// 2. mouseleave: Quita clase highlight y registra
-zonaMouse.addEventListener('mouseleave', (event) => {
-    zonaMouse.classList.remove('highlight');
-    log("Ratón Salió");
-});
+/**
+ * Maneja el evento de salida del ratón de la zona
+ * @param {MouseEvent} event - El objeto del evento de ratón
+ */
+function manejarMouseLeave(event) {
+    event.target.classList.remove('highlight');
+    log('Ratón Salió');
+}
 
-// 3. click: Registra "Clic"
-zonaMouse.addEventListener('click', (event) => {
-    log("Clic");
-});
+/**
+ * Maneja el evento de clic en la zona del ratón
+ * @param {MouseEvent} event - El objeto del evento de ratón
+ */
+function manejarClick(event) {
+    log('Clic');
+}
 
-// 4. mousemove: Registra la posición X, Y (Desafío: usa clientX/Y)
-zonaMouse.addEventListener('mousemove', (event) => {
-    // event.clientX y event.clientY dan la posición relativa a la ventana (viewport)
-    const posX = event.clientX;
-    const posY = event.clientY;
-    log(`Ratón moviéndose en X: ${posX}, Y: ${posY}`);
-});
+/**
+ * Maneja el evento de movimiento del ratón y registra su posición
+ * @param {MouseEvent} event - El objeto del evento de ratón
+ */
+function manejarMouseMove(event) {
+    log(`Ratón moviéndose en X: ${event.clientX}, Y: ${event.clientY}`);
+}
 
+/**
+ * Maneja el evento de enfoque en el input de texto
+ * @param {FocusEvent} event - El objeto del evento de enfoque
+ */
+function manejarFocus(event) {
+    log('Input enfocado');
+}
 
-// 5. focus: Registra "Input enfocado"
-inputTexto.addEventListener('focus', (event) => {
-    log("Input enfocado");
-});
+/**
+ * Maneja el evento de pérdida de enfoque en el input de texto
+ * @param {FocusEvent} event - El objeto del evento de enfoque
+ */
+function manejarBlur(event) {
+    log('Input desenfocado');
+}
 
-// 6. blur: Registra "Input desenfocado"
-inputTexto.addEventListener('blur', (event) => {
-    log("Input desenfocado");
-});
-
-// 7. keydown: Registra "Tecla pulsada: (la tecla pulsada)"
-inputTexto.addEventListener('keydown', (event) => {
-    // event.key contiene el valor de la tecla presionada (e.g., 'a', 'Enter', 'Shift')
+/**
+ * Maneja el evento de tecla pulsada y registra qué tecla fue
+ * @param {KeyboardEvent} event - El objeto del evento de teclado
+ */
+function manejarKeyDown(event) {
     log(`Tecla pulsada: ${event.key}`);
-});
+}
 
-// 8. keyup: Registra "Tecla soltada: (el código de la tecla)"
-inputTexto.addEventListener('keyup', (event) => {
-    // event.code contiene el código físico de la tecla (e.g., 'KeyA', 'Enter', 'ShiftLeft')
+/**
+ * Maneja el evento de tecla soltada y registra su código
+ * @param {KeyboardEvent} event - El objeto del evento de teclado
+ */
+function manejarKeyUp(event) {
     log(`Tecla soltada: ${event.code}`);
-});
+}
 
-// Mensaje inicial de confirmación
-log("Script de eventos cargado.");
+/**
+ * Inicializa todos los event listeners necesarios para el laboratorio de eventos
+ */
+function inicializar() {
+    // Obtener elementos del DOM
+    const zonaMouse = document.getElementById('zona-mouse');
+    const inputTexto = document.getElementById('input-texto');
+
+    // Eventos de Ratón
+    zonaMouse.addEventListener('mouseenter', manejarMouseEnter);
+    zonaMouse.addEventListener('mouseleave', manejarMouseLeave);
+    zonaMouse.addEventListener('click', manejarClick);
+    zonaMouse.addEventListener('mousemove', manejarMouseMove);
+
+    // Eventos de Teclado
+    inputTexto.addEventListener('focus', manejarFocus);
+    inputTexto.addEventListener('blur', manejarBlur);
+    inputTexto.addEventListener('keydown', manejarKeyDown);
+    inputTexto.addEventListener('keyup', manejarKeyUp);
+
+    log('Sistema de eventos iniciado. ¡Comienza a interactuar!');
+}
+
+// Iniciar cuando el DOM esté completamente cargado
+inicializar();
