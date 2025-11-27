@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de MiArma - Artista Digital especializada en paisajes de ciencia ficción">
+    <meta name="author" content="MiArma">
+    <meta name="keywords" content="arte digital, ciencia ficción, paisajes futuristas, ilustración digital">
+    <title>MiArma - Artista Digital | Portfolio Sci-Fi</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo/logo.png" alt="MiArma Logo - Artista Digital">
+                <h1>MiArma</h1>
+            </div>
+            <nav class="nav">
+                <a href="#about" class="nav-link">Sobre Mí</a>
+                <a href="#gallery" class="nav-link">Galería</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+                <a href="credits.html" class="nav-link">Créditos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-image">
+            <img src="assets/images/hero/hero-image.jpg" alt="Paisaje futurista de ciencia ficción creado por MiArma">
+        </div>
+        <div class="hero-content">
+            <h2 class="hero-title">Explorando Mundos Futuristas</h2>
+            <p class="hero-subtitle">Arte Digital | Paisajes de Ciencia Ficción</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">Sobre Mí</h2>
+                <div class="about-content">
+                    <p>
+                        Soy MiArma, una artista digital apasionada por crear paisajes de ciencia ficción 
+                        que transportan a los espectadores a mundos inexplorados. Mi trabajo combina 
+                        elementos de cyberpunk, space opera y tecnología futurista.
+                    </p>
+                    <div class="audio-player">
+                        <h3>Escucha la Atmósfera de Mi Trabajo</h3>
+                        <audio controls>
+                            <source src="assets/audio/ambient-sound.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <h2 class="section-title">Mi Galería</h2>
+                
+                <!-- Main Image Display -->
+                <div class="gallery-main">
+                    <img id="gallery-main-image" 
+                         src="assets/images/gallery/full/image-1.jpg" 
+                         alt="Obra principal de la galería - Estación espacial futurista">
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="gallery-thumbnails">
+                    <img class="thumbnail active" 
+                         src="assets/images/gallery/thumbnails/thumb-1.jpg" 
+                         alt="Miniatura - Estación espacial futurista"
+                         data-full-image="assets/images/gallery/full/image-1.jpg">
+                    
+                    <img class="thumbnail" 
+                         src="assets/images/gallery/thumbnails/thumb-2.jpg" 
+                         alt="Miniatura - Ciudad cyberpunk"
+                         data-full-image="assets/images/gallery/full/image-2.jpg">
+                    
+                    <img class="thumbnail" 
+                         src="assets/images/gallery/thumbnails/thumb-3.jpg" 
+                         alt="Miniatura - Portal espacial"
+                         data-full-image="assets/images/gallery/full/image-3.jpg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section" id="reel">
+            <div class="container">
+                <h2 class="section-title">Mi Reel</h2>
+                <p>Descubre mi proceso creativo y algunas de mis mejores obras en movimiento.</p>
+                <button class="btn-primary" id="btn-open-modal">
+                    <img src="assets/images/logo/contact-icon.gif" alt="Icono animado" class="btn-icon">
+                    Ver Reel
+                </button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <p>¿Interesado en colaborar? ¡Hablemos!</p>
+                <a href="mailto:contacto@miarma.com" class="btn-secondary">Enviar Mensaje</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MiArma - Artista Digital</p>
+            <p>
+                <a href="credits.html" class="footer-link">Créditos y Licencias</a>
+            </p>
+            <div class="license">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                    <img alt="Licencia Creative Commons" 
+                         style="border-width:0" 
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                <p>
+                    Esta obra está bajo una 
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                        Licencia Creative Commons Atribución 4.0 Internacional
+                    </a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="btn-close-modal">&times;</span>
+            <h3>Reel de MiArma</h3>
+            <video id="modal-video" controls>
+                <source src="assets/video/reel-video.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

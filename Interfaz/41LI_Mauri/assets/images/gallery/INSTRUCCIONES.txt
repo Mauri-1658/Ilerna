@@ -1,0 +1,26 @@
+<!-- Placeholder para recursos multimedia -->
+<!--
+Este archivo te indica qué recursos necesitas descargar.
+
+IMPORTANTE: Lee la guía completa en GUIA_RECURSOS.md
+
+Recursos necesarios en esta carpeta:
+
+📸 GALERÍA - VERSIONES COMPLETAS (full/):
+- image-1.jpg (1920px, optimizado, estación espacial)
+- image-2.jpg (1920px, optimizado, ciudad cyberpunk)
+- image-3.jpg (1920px, optimizado, portal espacial)
+
+📸 GALERÍA - MINIATURAS (thumbnails/):
+- thumb-1.jpg (400x250px, optimizado)
+- thumb-2.jpg (400x250px, optimizado)
+- thumb-3.jpg (400x250px, optimizado)
+
+💡 CONSEJO: Usa las versiones completas para crear las miniaturas
+- Abre image-1.jpg en GIMP
+- Escala a 400x250px
+- Exporta como thumb-1.jpg con calidad 85%
+
+Fuente recomendada: https://www.pexels.com
+Busca: "space station", "cyberpunk city", "cosmic portal"
+-->

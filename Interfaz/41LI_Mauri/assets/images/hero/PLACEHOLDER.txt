@@ -1,0 +1,11 @@
+<!-- Este es un archivo placeholder -->
+<!-- Reemplaza esta imagen con tu imagen hero descargada de Pexels -->
+<!-- 
+Instrucciones:
+1. Ve a https://www.pexels.com
+2. Busca "futuristic landscape"
+3. Descarga una imagen de 1920px
+4. Optimízala a <250KB
+5. Renómbrala como "hero-image.jpg"
+6. Colócala en esta carpeta
+-->
