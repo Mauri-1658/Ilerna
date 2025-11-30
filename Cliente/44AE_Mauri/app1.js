@@ -1,5 +1,5 @@
 /**
- * Añade un mensaje al registro de eventos en pantalla
+ * Añade un mensaje al registrar eventos en pantalla 
  * @param {string} mensaje - El texto del mensaje a mostrar en el log
  */
 function log(mensaje) {
@@ -42,7 +42,7 @@ function manejarClick(event) {
  * @param {MouseEvent} event - El objeto del evento de ratón
  */
 function manejarMouseMove(event) {
-    log(`Ratón moviéndose en X: ${event.clientX}, Y: ${event.clientY}`);
+    log(`Ratón: X: ${event.clientX}, Y: ${event.clientY}`);
 }
 
 /**
@@ -50,7 +50,7 @@ function manejarMouseMove(event) {
  * @param {FocusEvent} event - El objeto del evento de enfoque
  */
 function manejarFocus(event) {
-    log('Input enfocado');
+    log('Teclado enfocado');
 }
 
 /**
@@ -58,7 +58,7 @@ function manejarFocus(event) {
  * @param {FocusEvent} event - El objeto del evento de enfoque
  */
 function manejarBlur(event) {
-    log('Input desenfocado');
+    log('Teclado desenfocado');
 }
 
 /**

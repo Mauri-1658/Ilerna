@@ -1,46 +1,38 @@
 /**
- * Expresión regular para validar el formato de email
- * Formato básico: texto@dominio.extension
- * @type {RegExp}
+ * Regulación para validar un email
  */
 const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
- * Valida el email en tiempo real y actualiza el feedback visual
- * @param {Event} event - El objeto del evento input
+ * Función para validar un email
  */
 function validarEmail(event) {
     const input = event.target;
-    const feedback = document.getElementById('email-feedback');
+    const feedback = document.getElementById("feedback");
     const valorEmail = input.value;
 
-    // Comprobar si el email es válido usando la regex
+    // Comprobar si el email es válido
     if (regexEmail.test(valorEmail)) {
-        // Email válido
-        input.classList.remove('invalido');
-        input.classList.add('valido');
-        feedback.textContent = 'Email Válido';
-        feedback.classList.remove('invalido');
-        feedback.classList.add('valido');
+        input.classList.remove("invalido");
+        input.classList.add("valido");
+        feedback.textContent = "Email válido";
+        feedback.classList.remove("invalido");
+        feedback.classList.add("valido");
     } else {
-        // Email inválido
-        input.classList.remove('valido');
-        input.classList.add('invalido');
-        feedback.textContent = 'Email Inválido';
-        feedback.classList.remove('valido');
-        feedback.classList.add('invalido');
+        input.classList.remove("valido");
+        input.classList.add("invalido");
+        feedback.textContent = "Email inválido";
+        feedback.classList.remove("valido");
+        feedback.classList.add("invalido");
     }
 }
 
 /**
- * Inicializa el validador de email en vivo
+ * Función para inicializar el validador de email
  */
 function inicializar() {
-    const emailInput = document.getElementById('email-input');
-    
-    // Añadir listener para validación en tiempo real
-    emailInput.addEventListener('input', validarEmail);
+    const emailInput = document.getElementById("email-input");
+    emailInput.addEventListener("input", validarEmail);
 }
 
-// Iniciar cuando el DOM esté completamente cargado
 inicializar();
