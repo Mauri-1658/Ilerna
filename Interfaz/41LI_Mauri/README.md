@@ -13,16 +13,16 @@ Portfolio interactivo de una página para la artista digital ficticia "MiArma", 
 
 ## 🎨 Tabla de Recursos Externos
 
-| Archivo               | Autor           | Fuente                                         | Licencia                      |
-| --------------------- | --------------- | ---------------------------------------------- | ----------------------------- |
-| `hero-image.jpg`      | _Por añadir_    | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
-| `logo.png`            | _Por añadir_    | [Flaticon](https://www.flaticon.com)           | Flaticon License (Atribución) |
-| `gallery/image-1.jpg` | _Por añadir_    | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
-| `gallery/image-2.jpg` | _Por añadir_    | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
-| `gallery/image-3.jpg` | _Por añadir_    | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
-| `reel-video.mp4`      | _Por añadir_    | [Pexels Videos](https://www.pexels.com/videos) | Pexels License (CC0)          |
-| `ambient-sound.mp3`   | _Por añadir_    | [Freesound](https://freesound.org)             | CC0 / CC BY                   |
-| `contact-icon.gif`    | Creación propia | N/A                                            | CC BY 4.0                     |
+| Archivo               | Fuente                                         | Licencia                      |
+| --------------------- | ---------------------------------------------- | ----------------------------- |
+| `hero-image.jpg`      | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
+| `logo.png`            | [Flaticon](https://www.flaticon.com)           | Flaticon License (Atribución) |
+| `gallery/image-1.jpg` | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
+| `gallery/image-2.jpg` | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
+| `gallery/image-3.jpg` | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
+| `reel-video.mp4`      | [Pexels Videos](https://www.pexels.com/videos) | Pexels License (CC0)          |
+| `ambient-sound.mp3`   | [Freesound](https://freesound.org)             | CC0 / CC BY                   |
+| `contact-icon.gif`    | Creación propia                                | N/A                           |
 
 ### 📝 Instrucciones para Completar
 

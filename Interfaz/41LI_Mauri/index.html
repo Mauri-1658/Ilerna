@@ -6,7 +6,8 @@
     <meta name="description" content="Portfolio de MiArma - Artista Digital especializada en paisajes de ciencia ficción">
     <meta name="author" content="MiArma">
     <meta name="keywords" content="arte digital, ciencia ficción, paisajes futuristas, ilustración digital">
-    <title>MiArma - Artista Digital | Portfolio Sci-Fi</title>
+    <title>MiArma</title>
+    <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
                 <h1>MiArma</h1>
             </div>
             <nav class="nav">
-                <a href="#about" class="nav-link">Sobre Mí</a>
+                <a href="#audio" class="nav-link">Audio</a>
                 <a href="#gallery" class="nav-link">Galería</a>
                 <a href="#contact" class="nav-link">Contacto</a>
                 <a href="credits.html" class="nav-link">Créditos</a>
@@ -29,33 +30,25 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-image">
-            <img src="assets/images/hero/hero-image.jpg" alt="Paisaje futurista de ciencia ficción creado por MiArma">
+            <img src="assets/images/hero/hero-image.jpg" alt="Ciudad cyberpunk futurista">
         </div>
         <div class="hero-content">
-            <h2 class="hero-title">Explorando Mundos Futuristas</h2>
-            <p class="hero-subtitle">Arte Digital | Paisajes de Ciencia Ficción</p>
+            <h2 class="hero-title">Explorando Vistas Futuristas</h2>
+            <p class="hero-subtitle">Arte Digital de Ciencia Ficción</p>
         </div>
     </section>
 
     <!-- Main Content -->
     <main class="main">
-        <!-- About Section -->
-        <section class="about" id="about">
+        <!-- Audio Section -->
+        <section class="audio" id="audio">
             <div class="container">
-                <h2 class="section-title">Sobre Mí</h2>
-                <div class="about-content">
-                    <p>
-                        Soy MiArma, una artista digital apasionada por crear paisajes de ciencia ficción 
-                        que transportan a los espectadores a mundos inexplorados. Mi trabajo combina 
-                        elementos de cyberpunk, space opera y tecnología futurista.
-                    </p>
-                    <div class="audio-player">
-                        <h3>Escucha la Atmósfera de Mi Trabajo</h3>
-                        <audio controls>
-                            <source src="assets/audio/ambient-sound.mp3" type="audio/mpeg">
-                            Tu navegador no soporta el elemento de audio.
-                        </audio>
-                    </div>
+                <div class="audio-player">
+                    <h3>Escucha el sonido del futuro</h3>
+                    <audio controls>
+                        <source src="assets/Audio/audio.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
                 </div>
             </div>
         </section>
@@ -68,26 +61,26 @@
                 <!-- Main Image Display -->
                 <div class="gallery-main">
                     <img id="gallery-main-image" 
-                         src="assets/images/gallery/full/image-1.jpg" 
+                         src="assets/images/gallery/image-1.jpg" 
                          alt="Obra principal de la galería - Estación espacial futurista">
                 </div>
 
                 <!-- Thumbnails -->
                 <div class="gallery-thumbnails">
                     <img class="thumbnail active" 
-                         src="assets/images/gallery/thumbnails/thumb-1.jpg" 
+                         src="assets/images/gallery/thumb-1.jpg" 
                          alt="Miniatura - Estación espacial futurista"
-                         data-full-image="assets/images/gallery/full/image-1.jpg">
+                         data-full-image="assets/images/gallery/image-1.jpg">
                     
                     <img class="thumbnail" 
-                         src="assets/images/gallery/thumbnails/thumb-2.jpg" 
+                         src="assets/images/gallery/thumb-2.jpg" 
                          alt="Miniatura - Ciudad cyberpunk"
-                         data-full-image="assets/images/gallery/full/image-2.jpg">
+                         data-full-image="assets/images/gallery/image-2.jpg">
                     
                     <img class="thumbnail" 
-                         src="assets/images/gallery/thumbnails/thumb-3.jpg" 
+                         src="assets/images/gallery/thumb-3.jpg" 
                          alt="Miniatura - Portal espacial"
-                         data-full-image="assets/images/gallery/full/image-3.jpg">
+                         data-full-image="assets/images/gallery/image-3.jpg">
                 </div>
             </div>
         </section>
@@ -102,6 +95,18 @@
                     Ver Reel
                 </button>
             </div>
+
+            <!-- Video Modal -->
+            <div id="video-modal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close" id="btn-close-modal">&times;</span>
+                    <h3>Reel de MiArma</h3>
+                    <video id="modal-video" controls>
+                        <source src="assets/Video/video.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>  
         </section>
 
         <!-- Contact Section -->
@@ -117,7 +122,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 MiArma - Artista Digital</p>
+            <p>&copy; 2025 MiArma - Mauri</p>
             <p>
                 <a href="credits.html" class="footer-link">Créditos y Licencias</a>
             </p>
@@ -136,18 +141,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Video Modal -->
-    <div id="video-modal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" id="btn-close-modal">&times;</span>
-            <h3>Reel de MiArma</h3>
-            <video id="modal-video" controls>
-                <source src="assets/video/reel-video.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-    </div>
 
     <script src="js/main.js"></script>
 </body>
