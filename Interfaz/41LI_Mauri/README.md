@@ -1,397 +1,257 @@
-# Portfolio Interactivo MiArma - Artista Digital
+# Portfolio MiArma 🎨
 
-> Proyecto de evaluación para el módulo de Diseño de Interfaces Web
+> Proyecto de Diseño de Interfaces Web - 2º DAW
 
-## 📋 Descripción del Proyecto
-
-Portfolio interactivo de una página para la artista digital ficticia "MiArma", especializada en paisajes de ciencia ficción. El proyecto demuestra competencias en:
-
-- **RA3**: Gestión y optimización de contenido multimedia
-- **RA4**: Interactividad con JavaScript y maquetación HTML5/CSS3
+Portfolio de una página para una artista digital de ciencia ficción. Incluye galería interactiva, reproductor de video, audio ambiental y animaciones.
 
 ---
 
-## 🎨 Tabla de Recursos Externos
+## 📁 Estructura del Proyecto
 
-| Archivo               | Fuente                                         | Licencia                      |
-| --------------------- | ---------------------------------------------- | ----------------------------- |
-| `hero-image.jpg`      | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
-| `logo.png`            | [Flaticon](https://www.flaticon.com)           | Flaticon License (Atribución) |
-| `gallery/image-1.jpg` | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
-| `gallery/image-2.jpg` | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
-| `gallery/image-3.jpg` | [Pexels](https://www.pexels.com)               | Pexels License (CC0)          |
-| `reel-video.mp4`      | [Pexels Videos](https://www.pexels.com/videos) | Pexels License (CC0)          |
-| `ambient-sound.mp3`   | [Freesound](https://freesound.org)             | CC0 / CC BY                   |
-| `contact-icon.gif`    | Creación propia                                | N/A                           |
-
-### 📝 Instrucciones para Completar
-
-Para cada recurso marcado como "Por añadir":
-
-1. **Imágenes**: Visita [Pexels](https://www.pexels.com) y busca términos como:
-
-   - "futuristic landscape"
-   - "sci-fi space"
-   - "cyberpunk city"
-   - "space station"
-
-2. **Vídeo**: En [Pexels Videos](https://www.pexels.com/videos), busca:
-
-   - "space animation"
-   - "cosmic"
-   - "digital abstract"
-
-3. **Audio**: En [Freesound](https://freesound.org), busca:
-
-   - "ambient space"
-   - "sci-fi atmosphere"
-   - "electronic ambient"
-
-4. **Descarga y optimiza** según las especificaciones de la Fase 1
-
-5. **Actualiza esta tabla** con el nombre del autor y el enlace exacto
+```
+41LI_Mauri/
+├── index.html          # Página principal
+├── credits.html        # Créditos y licencias
+├── css/
+│   └── styles.css     # Estilos
+├── js/
+│   └── main.js        # JavaScript (galería y modal)
+└── assets/
+    ├── images/        # Imágenes del portfolio
+    ├── Audio/         # Audio ambiental
+    └── Video/         # Video del reel
+```
 
 ---
 
-## 🛠️ Herramientas Utilizadas
+## 🎯 Funcionalidades
 
-### Optimización de Imágenes
+### ✅ Lo que tiene el proyecto:
 
-- **GIMP** (GNU Image Manipulation Program) - Para redimensionar y optimizar imágenes
-  - Alternativa online: [Photopea](https://www.photopea.com)
-- **TinyPNG** - Compresión adicional sin pérdida de calidad
-  - URL: https://tinypng.com
+- **Galería interactiva**: Haz clic en las miniaturas para cambiar la imagen principal
+- **Modal de video**: Botón que abre un modal con el video del reel
+- **Reproductor de audio**: Audio ambiental en la sección "Sobre Mí"
+- **Icono animado**: Un icono en el botón "Ver Reel" que cambia de color automáticamente
+- **Diseño responsive**: Se adapta a móvil, tablet y escritorio
+- **Navegación suave**: Scroll suave entre secciones
+- **Efectos hover**: Animaciones al pasar el ratón
 
-### Procesamiento de Vídeo
+### 🎨 Características del diseño:
 
-- **HandBrake** - Conversión de vídeo a MP4 (H.264)
-  - Configuración: H.264, Web Optimized, Quality: 22
-- **Alternativa**: FFmpeg (línea de comandos)
-  ```bash
-  ffmpeg -i input.mp4 -c:v libx264 -preset slow -crf 23 -c:a aac -b:a 128k output.mp4
-  ```
-
-### Edición de Audio
-
-- **Audacity** - Recorte y exportación de audio
-  - Formato: MP3, 128 kbps, mono
-- **Alternativa online**: [TwistedWave](https://twistedwave.com/online)
-
-### Creación de GIF
-
-- **GIMP** - Combinación de capas para animación
-- **ezgif.com** - Herramienta online para crear y optimizar GIFs
-  - URL: https://ezgif.com/maker
-
-### Desarrollo Web
-
-- **Visual Studio Code** - Editor de código
-- **Chrome DevTools** - Testing y debugging
-- **Live Server** - Servidor local para desarrollo
+- Tema oscuro futurista
+- Colores vibrantes (morado, cyan)
+- Gradientes y sombras
+- Animaciones CSS
+- Glassmorphism en algunos elementos
 
 ---
 
-## 📐 Justificación de Formatos Técnicos
+## 🚀 Cómo abrir el proyecto
 
-### Imágenes
+### Opción 1: Con XAMPP (recomendado)
 
-#### JPG para la Imagen Hero
+1. Abre el **XAMPP Control Panel**
+2. Arranca **Apache**
+3. Abre el navegador y ve a:
+   ```
+   http://localhost/DAW/Ilerna/Interfaz/41LI_Mauri/index.html
+   ```
 
-**Por qué JPG y no PNG:**
+### Opción 2: Con Live Server (VSCode)
 
-- El formato JPG es ideal para fotografías y paisajes con gradientes de color
-- Ofrece mejor compresión con pérdida mínima de calidad visual
-- El tamaño del archivo es significativamente menor (250KB vs >2MB en PNG)
-- PNG sería innecesario ya que no necesitamos transparencia en la imagen hero
-
-#### PNG para el Logo
-
-**Por qué PNG y no JPG:**
-
-- PNG mantiene la transparencia del fondo, esencial para el logo
-- No tiene compresión con pérdida, manteniendo los bordes nítidos
-- Ideal para gráficos con áreas de color sólido
-
-#### WEBP como Alternativa Moderna
-
-- Ofrece mejor compresión que JPG con la misma calidad
-- Soporta transparencia como PNG
-- Compatible con navegadores modernos
-- Puede reducir el peso hasta un 30% adicional
-
-### Vídeo
-
-#### MP4 (H.264) para el Reel
-
-**Por qué MP4 H.264:**
-
-- **Compatibilidad universal**: Soportado por todos los navegadores modernos
-- **Compresión eficiente**: Mantiene calidad visual con tamaño pequeño (<3MB)
-- **Web-optimized**: Permite reproducción progresiva (stream)
-- **Hardware acceleration**: Decodificación acelerada en dispositivos
-
-**Configuraciones aplicadas:**
-
-- Codec de vídeo: H.264 (libx264)
-- CRF (Constant Rate Factor): 23 (balance calidad/tamaño)
-- Preset: slow (mejor compresión)
-- Resolución: 1920x1080 o menor
-- Framerate: 30fps
-
-### Audio
-
-#### MP3 para el Audio Ambiental
-
-**Por qué MP3:**
-
-- **Compatibilidad**: Soportado universalmente
-- **Compresión**: 128 kbps es suficiente para audio ambiental
-- **Tamaño**: Un clip de 15s ocupa ~240KB
-- **Calidad**: Imperceptible la pérdida en audio ambiente
-
-**Por qué no WAV:**
-
-- WAV sin comprimir ocuparía ~2.5MB para 15 segundos
-- No ofrece ventajas audibles para audio web
-
-### GIF para Animación de Botón
-
-#### Por qué GIF:
-
-- **Función específica**: Animaciones simples de pocos frames
-- **Sin dependencias**: No requiere JavaScript para animar
-- **Compatibilidad**: Universal, incluso en emails
-- **Tamaño controlable**: 2-3 frames optimizados (~50KB)
-
-**Limitaciones aceptadas:**
-
-- Paleta de 256 colores (suficiente para iconos simples)
-- Sin canal alpha verdadero (pero con transparencia binaria)
+1. Instala la extensión **Live Server** en VSCode
+2. Haz clic derecho en `index.html`
+3. Selecciona **"Open with Live Server"**
 
 ---
 
-## ⚖️ Licencia de Tu Obra (Landing Page)
+## 🎨 Recursos Multimedia Utilizados
 
-### 📜 Licencia Elegida
+| Tipo   | Archivo       | ¿De dónde?                                     | Licencia                         |
+| ------ | ------------- | ---------------------------------------------- | -------------------------------- |
+| Imagen | Hero, Galería | [Pexels](https://www.pexels.com)               | **CC0** (gratis, sin atribución) |
+| Logo   | logo.png      | [Flaticon](https://www.flaticon.com)           | Flaticon (con atribución)        |
+| Video  | video.mp4     | [Pexels Videos](https://www.pexels.com/videos) | **CC0**                          |
+| Audio  | audio.mp3     | [Freesound](https://freesound.org)             | **CC0** / CC BY                  |
+| Iconos | Frames 1-3    | Generados con IA                               | Propios                          |
 
-He elegido para este proyecto la licencia:
+> **CC0** = Dominio público, puedes usar libremente
 
-**Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**
+---
+
+## 🛠️ Herramientas que usé
+
+### Para el icono animado:
+
+- **JavaScript** → Cambia entre 3 imágenes cada 500ms
+- **CSS** → Efecto de pulso con brillo
+
+---
+
+## 🎓 ¿Por qué estos formatos?
+
+### JPG vs PNG
+
+**JPG** → Para fotos (hero, galería)
+
+- Pesa menos
+- Buena calidad para fotos
+- ❌ No tiene transparencia
+
+**PNG** → Para logos e iconos
+
+- ✅ Tiene transparencia
+- Bordes más nítidos
+- Pesa más que JPG
+
+### MP4 para el video
+
+- Compatible con todos los navegadores
+- Buena calidad con poco peso
+- Se puede reproducir mientras se descarga
+
+### MP3 para el audio
+
+- Compatible universalmente
+- 128 kbps es suficiente para audio ambiental
+- Pesa poco (15s = ~240KB)
+
+---
+
+## 💡 Cosas técnicas que aprendí
+
+### HTML5 Semántico
+
+Usé etiquetas que tienen significado:
+
+- `<header>` → Cabecera
+- `<nav>` → Navegación
+- `<main>` → Contenido principal
+- `<section>` → Secciones
+- `<footer>` → Pie de página
+
+### JavaScript
+
+- Cambiar imágenes de la galería al hacer clic
+- Abrir/cerrar modal del video
+- Pausar el video al cerrar
+- Animar el icono del botón
+- Cerrar modal con la tecla ESC
+
+### CSS Moderno
+
+- Variables CSS (`:root`)
+- Flexbox y Grid
+- Animaciones con `@keyframes`
+- Efectos hover y focus
+- Diseño responsive con `@media`
+
+---
+
+## 📜 Licencia del Proyecto
+
+Este proyecto usa **Creative Commons BY 4.0**
 
 ![CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
 
-### ¿Qué significa CC BY 4.0?
+### ¿Qué significa?
 
-Esta licencia permite a otros:
+- ✅ Puedes copiar el código
+- ✅ Puedes modificarlo
+- ✅ Puedes usarlo en tus proyectos
+- 🔷 **Solo tienes que** dar crédito
 
-- ✅ **Compartir**: Copiar y redistribuir el material en cualquier medio o formato
-- ✅ **Adaptar**: Remezclar, transformar y construir sobre el material
-- ✅ **Uso comercial**: Usar el material para propósitos comerciales
+### ¿Por qué CC BY 4.0?
 
-**Bajo las siguientes condiciones:**
-
-- 🔷 **Atribución**: Deben dar crédito apropiado, proporcionar un enlace a la licencia, e indicar si se realizaron cambios.
-
-### ¿Por qué elegí CC BY 4.0?
-
-1. **Permisiva y flexible**: Permite el máximo uso posible de mi trabajo
-2. **Fomenta la colaboración**: Otros pueden aprender y mejorar sobre mi código
-3. **Educativa**: Apropiada para un proyecto académico que puede servir de ejemplo
-4. **Balance perfecto**: Protege mi autoría pero permite reutilización
+- Es una licencia **permisiva** (da libertad)
+- Permite que otros aprendan de mi código
+- Protege mi autoría pero no limita el uso
+- Es perfecta para proyectos educativos
 
 ---
 
-## 🔍 Análisis de Compatibilidad de Licencias
+## ❓ ¿Y si usara CC BY-SA?
 
-### ¿Por qué puedo usar CC BY 4.0 para mi proyecto?
+### Situación hipotética:
 
-Mi landing page es una **obra derivada** que combina:
+> "Si una imagen tuviera licencia **CC BY-SA**, ¿qué licencia debería usar para mi proyecto?"
 
-- Código HTML/CSS/JavaScript (creación propia)
-- Recursos multimedia con licencias CC0 y Pexels License
+**Tendría que usar CC BY-SA también.**
 
-#### Compatibilidad con Pexels License (CC0-equivalente):
-
-- ✅ **Pexels License** es similar a CC0 (dominio público)
-- ✅ No requiere atribución (aunque es buena práctica darla)
-- ✅ Permite uso comercial sin restricciones
-- ✅ **Compatible con CC BY 4.0** porque no impone restricciones adicionales
-
-#### Compatibilidad con CC0:
-
-- ✅ **CC0** renuncia a todos los derechos (dominio público)
-- ✅ No requiere atribución
-- ✅ Totalmente permisivo
-- ✅ **Compatible con cualquier licencia**, incluyendo CC BY 4.0
-
-### Jerarquía de Licencias
+La licencia **SA (ShareAlike)** significa "compartir igual". Es como un virus legal (pero bueno):
 
 ```
-CC0 / Pexels License (más permisivas)
-        ↓
-    CC BY 4.0  ← Mi elección
-        ↓
-   CC BY-SA 4.0 (requiere compartir igual)
-        ↓
-   CC BY-NC 4.0 (no comercial)
+Imagen con CC BY-SA
+       ↓
+Mi proyecto DEBE ser CC BY-SA también
 ```
 
-**Regla general**: Puedo elegir una licencia **más restrictiva** que las de mis recursos base, pero no **menos restrictiva**.
+**ShareAlike = Si usas mi trabajo, tienes que compartir TU trabajo con la misma licencia**
+
+### ¿Qué pasaría si no lo hago?
+
+- ❌ Violaría la licencia
+- ❌ El autor me podría exigir que retire su imagen
+- ❌ Problemas legales
+
+### ¿Cómo se evita?
+
+1. **Revisar TODAS las licencias** antes de usar imágenes
+2. Preferir **CC0** o **CC BY** (sin SA)
+3. Documentar todo en `credits.html`
 
 ---
 
-## ❓ Escenario Hipotético: ¿Y si usara CC BY-SA?
+## 🔧 Cómo probar el proyecto
 
-### Pregunta:
+### Checklist de testing:
 
-> "Si una de las imágenes de la galería hubiera tenido una licencia Creative Commons Atribución-CompartirIgual (CC BY-SA), ¿qué licencia estarías obligado a usar para tu landing page? ¿Por qué?"
-
-### Respuesta:
-
-**Estaría obligado a usar CC BY-SA 4.0 (o una versión compatible de ShareAlike).**
-
-### Explicación Detallada:
-
-#### ¿Qué es "ShareAlike" (CompartirIgual)?
-
-La cláusula **SA (ShareAlike)** es una condición "viral" o "copyleft" que establece:
-
-> "Si remezclas, transformas o creas a partir del material, debes distribuir tus contribuciones bajo **la misma licencia** que el original."
-
-#### ¿Por qué es obligatorio?
-
-1. **Obra derivada**: Mi landing page que incorpora la imagen CC BY-SA se convierte en una "obra derivada"
-
-2. **Herencia de licencia**: La cláusula SA se "propaga" a toda la obra derivada
-
-3. **No hay excepción**: Aunque solo UNA imagen tenga CC BY-SA, contamina (legalmente) todo el proyecto
-
-#### Ejemplo Práctico:
-
-```
-Imagen de galería: CC BY-SA 4.0
-        ↓
-Landing page (obra derivada): DEBE ser CC BY-SA 4.0
-        ↓
-No podría usar: CC BY, CC BY-NC, o licencias propietarias
-```
-
-#### ¿Qué pasaría si uso CC BY en lugar de CC BY-SA?
-
-- ❌ **Violación de licencia**: Estaría incumpliendo los términos de CC BY-SA
-- ❌ **Consecuencias legales**: El autor original podría exigir que retire el contenido
-- ❌ **Pérdida de derechos**: Podría perder el derecho a usar esa imagen
-
-#### Incompatibilidades Importantes:
-
-**CC BY-SA es incompatible con:**
-
-- ❌ Licencias propietarias (con copyright tradicional)
-- ❌ CC BY-NC (no comercial) - puedes usar ambas, pero la obra resultante sería BY-NC-SA
-- ❌ Cualquier licencia que NO incluya la cláusula ShareAlike
-
-#### ¿Cómo evitar este problema?
-
-**Estrategias preventivas:**
-
-1. **Verificar TODAS las licencias** antes de usar recursos
-2. **Preferir CC0, CC BY** para máxima flexibilidad
-3. **Documentar** cada recurso en `credits.html`
-4. **Si dudo**: Contactar al autor o buscar alternativa
-
-#### Comparación de Escenarios:
-
-| Mi caso actual (CC0/Pexels)   | Escenario hipotético (CC BY-SA)  |
-| ----------------------------- | -------------------------------- |
-| Puedo elegir CC BY 4.0        | **Debo** usar CC BY-SA           |
-| Máxima flexibilidad           | Restricción heredada             |
-| Compatible con uso comercial  | Compatible, pero con condiciones |
-| Puedo cambiar licencia futura | Atado a ShareAlike               |
+- [ ] La galería cambia de imagen al hacer clic
+- [ ] El modal de video se abre y cierra
+- [ ] El video se pausa al cerrar el modal
+- [ ] El audio se reproduce correctamente
+- [ ] El icono del botón está animado
+- [ ] El scroll entre secciones es suave
+- [ ] Funciona en Chrome, Firefox y Edge
+- [ ] Se ve bien en móvil (DevTools → responsive)
 
 ---
 
-## 🚀 Cómo Ejecutar el Proyecto
+## 📱 Responsive Design
 
-### Requisitos Previos
+El proyecto se adapta a:
 
-- Servidor web local (XAMPP, Live Server, o similar)
-- Navegador web moderno (Chrome, Firefox, Edge)
-
-### Instalación
-
-1. **Clonar/Descargar** el proyecto en tu carpeta local:
-
-   ```
-   c:\xampp\htdocs\Ilerna\Interfaz\41LI_Mauri\
-   ```
-
-2. **Descargar recursos multimedia** de las fuentes indicadas y colocarlos en:
-
-   ```
-   assets/
-   ├── images/
-   │   ├── hero/hero-image.jpg
-   │   ├── logo/logo.png
-   │   ├── gallery/
-   │   │   ├── thumbnails/ (thumb-1.jpg, thumb-2.jpg, thumb-3.jpg)
-   │   │   └── full/ (image-1.jpg, image-2.jpg, image-3.jpg)
-   ├── video/reel-video.mp4
-   └── audio/ambient-sound.mp3
-   ```
-
-3. **Abrir** con servidor local:
-   - XAMPP: `http://localhost/Ilerna/Interfaz/41LI_Mauri/`
-   - Live Server: Click derecho → "Open with Live Server"
-
-### Verificación Cross-Browser
-
-1. **Chrome**: Abrir DevTools (F12) y probar galería + modal
-2. **Firefox**: Verificar misma funcionalidad
-3. **Edge**: Confirmar compatibilidad
-
-### Testing Responsive
-
-En DevTools (F12):
-
-1. Click en icono de dispositivo móvil
-2. Probar con:
-   - iPhone SE (375px)
-   - iPad (768px)
-   - Desktop (1920px)
-
----
-
-## ✨ Funcionalidades Implementadas
-
-### ✅ Fase 1: Contenido Multimedia (RA3)
-
-- [x] Estructura de carpetas organizada
-- [x] Plantillas para imágenes optimizadas
-- [x] Sistema de atribución en `credits.html`
-- [x] Documentación de licencias
-
-### ✅ Fase 2: Interactividad (RA4)
-
-- [x] HTML5 semántico (`<header>`, `<main>`, `<section>`, `<footer>`)
-- [x] Galería interactiva con JavaScript
-- [x] Modal de vídeo funcional
-- [x] Estilos CSS con `:hover` y `:focus`
-- [x] Transiciones suaves
-- [x] Diseño responsive
-- [x] Accesibilidad con teclado (ESC para cerrar modal)
+- 📱 **Móvil** (< 768px): Una columna, menú vertical
+- 📱 **Tablet** (768px - 1024px): Dos columnas
+- 💻 **Escritorio** (> 1024px): Diseño completo
 
 ---
 
 ## 📞 Contacto
 
-**Desarrollador**: [Tu Nombre]  
+**Estudiante**: Mauri  
+**Email**: mauri1658jr@alumnos.ilerna.com  
 **Asignatura**: Diseño de Interfaces Web  
-**Fecha**: Noviembre 2025
+**Curso**: 2º DAW  
+**Fecha**: Diciembre 2025
 
 ---
 
-## 📄 Licencia
+## 🎯 Criterios de Evaluación Cumplidos
 
-Este proyecto está licenciado bajo [Creative Commons Atribución 4.0 Internacional (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
+### RA3: Contenido Multimedia
 
-Puedes usar, modificar y distribuir este código siempre que des atribución apropiada.
+- ✅ Imágenes optimizadas (JPG, PNG)
+- ✅ Video MP4 (H.264)
+- ✅ Audio MP3
+- ✅ Animación (icono animado con JS/CSS)
+- ✅ Licencias documentadas
+
+### RA4: Interactividad
+
+- ✅ HTML5 semántico
+- ✅ JavaScript funcional (galería + modal)
+- ✅ Estilos CSS con hover y focus
+- ✅ Diseño responsive
+- ✅ Accesibilidad básica
+

@@ -133,6 +133,34 @@ function initializeEventListeners() {
 function init() {
     console.log('Portfolio MiArma inicializado');
     initializeEventListeners();
+    initializeAnimatedIcon();
+}
+
+/**
+ * Inicializa la animación del icono del botón
+ * Alterna entre 3 frames de imagen para crear efecto animado
+ */
+function initializeAnimatedIcon() {
+    const btnIcon = document.querySelector('.btn-icon');
+    
+    if (!btnIcon) {
+        return;
+    }
+    
+    // Array de frames para la animación
+    const frames = [
+        'assets/images/logo/icon-frame1.png',
+        'assets/images/logo/icon-frame2.png',
+        'assets/images/logo/icon-frame3.png'
+    ];
+    
+    let currentFrame = 0;
+    
+    // Cambiar frame cada 500ms
+    setInterval(() => {
+        currentFrame = (currentFrame + 1) % frames.length;
+        btnIcon.src = frames[currentFrame];
+    }, 500);
 }
 
 // Iniciar cuando el DOM esté listo
