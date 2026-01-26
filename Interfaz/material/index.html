@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FastTech - Desarrollo web profesional y consultoría de transformación digital. Creamos webs rápidas y modernas para tu negocio.">
+    <meta name="keywords" content="desarrollo web, transformación digital, webs modernas, FastTech">
+    <meta name="author" content="FastTech">
+    <title>FastTech - Desarrollo Web y Transformación Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav id="menu" aria-label="Navegación principal">
+            <a href="#home" class="link">Inicio</a>
+            <a href="#servicios" class="link">Cosas que hacemos</a>
+            <a href="#contacto" class="link">Contactar</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="home" aria-labelledby="titulo-bienvenida">
+            <h1 id="titulo-bienvenida" class="sr-only">Bienvenidos a FastTech</h1>
+            <img src="https://picsum.photos/1201/401" 
+                 class="banner" 
+                 alt="Banner de bienvenida a FastTech - Desarrollo web profesional">
+        </section>
+
+        <section id="servicios" aria-labelledby="titulo-servicios">
+            <h2 id="titulo-servicios" class="section-title">Nuestros Servicios</h2>
+            
+            <div class="grid">
+                <article class="card">
+                    <img src="https://picsum.photos/150" 
+                         alt="Icono de desarrollo web rápido">
+                    <p class="text">Hacemos webs muy rápidas y modernas para todo el mundo.</p>
+                    <button type="button" class="boton-accion" aria-label="Más información sobre desarrollo web">
+                        Clic aquí
+                    </button>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/151" 
+                         alt="Icono de consultoría digital">
+                    <p class="text">Consultoría de transformación digital avanzada.</p>
+                    <button type="button" class="boton-accion" aria-label="Más información sobre consultoría digital">
+                        Clic aquí
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto" class="section-title">Contacto</h2>
+            <form class="form-group" action="#" method="post" novalidate>
+                <div class="form-field">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" 
+                           id="nombre" 
+                           name="nombre" 
+                           placeholder="Pon tu nombre aquí" 
+                           required
+                           autocomplete="name">
+                </div>
+                <div class="form-field">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           placeholder="tu@email.com" 
+                           required
+                           autocomplete="email">
+                </div>
+                <div class="form-field">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" 
+                              name="mensaje" 
+                              placeholder="Escribe tu mensaje aquí" 
+                              required
+                              rows="5"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">ENVIAR</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FastTech. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
