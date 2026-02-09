@@ -1,62 +1,43 @@
-import { useState } from 'react';
-import Task from '@/Components/Task';
+import { useForm, router } from '@inertiajs/react';
+import TaskItem from '@/Components/TaskItem';
 import Stats from '@/Components/Stats';
 
-export default function Welcome() {
-    // Estado para las tareas
-    const [tasks, setTasks] = useState([]);
-    // Estado para el input
-    const [inputValue, setInputValue] = useState('');
+export default function Welcome({ tasks = [] }) {
+    // useForm para el formulario de añadir tarea
+    const { data, setData, post, processing, reset } = useForm({
+        title: '',
+    });
 
     // Calcular estadísticas
     const totalTasks = tasks.length;
-    const completedTasks = tasks.filter(t => t.completed).length;
+    const completedTasks = tasks.filter(t => t.is_completed).length;
     const progressPercentage = totalTasks > 0 
         ? Math.round((completedTasks / totalTasks) * 100) 
         : 0;
 
     // Añadir nueva tarea
-    const addTask = () => {
-        if (inputValue.trim() === '') return;
+    const addTask = (e) => {
+        e.preventDefault();
+        if (data.title.trim() === '') return;
         
-        const newTask = {
-            id: Date.now(),
-            title: inputValue.trim(),
-            completed: false
-        };
-        
-        setTasks([...tasks, newTask]);
-        setInputValue('');
+        post('/tasks', {
+            preserveScroll: true,
+            onSuccess: () => reset('title'),
+        });
     };
 
     // Manejar Enter en el input
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
-            addTask();
+            addTask(e);
         }
-    };
-
-    // Toggle completado
-    const toggleTask = (id) => {
-        setTasks(tasks.map(task => 
-            task.id === id 
-                ? { ...task, completed: !task.completed } 
-                : task
-        ));
-    };
-
-    // Editar título de tarea
-    const editTask = (id, newTitle) => {
-        setTasks(tasks.map(task => 
-            task.id === id 
-                ? { ...task, title: newTitle } 
-                : task
-        ));
     };
 
     // Limpiar tareas completadas
     const clearCompleted = () => {
-        setTasks(tasks.filter(task => !task.completed));
+        router.delete('/tasks/clear-completed', {
+            preserveScroll: true,
+        });
     };
 
     return (
@@ -88,26 +69,29 @@ export default function Welcome() {
                     />
 
                     {/* Input y botón añadir */}
-                    <div className="flex gap-3 mb-6">
+                    <form onSubmit={addTask} className="flex gap-3 mb-6">
                         <input
                             type="text"
-                            value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)}
+                            value={data.title}
+                            onChange={(e) => setData('title', e.target.value)}
                             onKeyDown={handleKeyDown}
                             placeholder="Añadir nueva tarea"
                             className="flex-1 px-4 py-3 rounded-xl border border-slate-200 
                                 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
                                 transition-all duration-200 text-slate-700 placeholder:text-slate-400"
+                            disabled={processing}
                         />
                         <button
-                            onClick={addTask}
+                            type="submit"
+                            disabled={processing}
                             className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl
                                 hover:bg-indigo-700 active:scale-95 transition-all duration-200
-                                shadow-lg shadow-indigo-200 hover:shadow-indigo-300"
+                                shadow-lg shadow-indigo-200 hover:shadow-indigo-300
+                                disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            Añadir
+                            {processing ? 'Añadiendo...' : 'Añadir'}
                         </button>
-                    </div>
+                    </form>
 
                     {/* Lista de tareas */}
                     {tasks.length === 0 ? (
@@ -122,11 +106,9 @@ export default function Welcome() {
                     ) : (
                         <ul className="space-y-3 mb-6">
                             {tasks.map(task => (
-                                <Task
+                                <TaskItem
                                     key={task.id}
                                     task={task}
-                                    onToggle={toggleTask}
-                                    onEdit={editTask}
                                 />
                             ))}
                         </ul>

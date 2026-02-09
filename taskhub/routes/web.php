@@ -1,18 +1,17 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// Task routes
+Route::get('/', [TaskController::class, 'index']);
+Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
+Route::put('/tasks/{id}', [TaskController::class, 'update'])->name('tasks.update');
+Route::delete('/tasks/clear-completed', [TaskController::class, 'clearCompleted'])->name('tasks.clearCompleted');
+Route::delete('/tasks/{id}', [TaskController::class, 'destroy'])->name('tasks.destroy');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
