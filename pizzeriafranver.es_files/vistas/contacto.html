@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto — Pizzería Franver</title>
+  <link rel="icon" href="https://pizzeriafranver.es/wp-content/uploads/2020/09/cropped-LOGO-VECTORIZADO-SIN-FONDO-1-32x32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>:root{--bg:#111;--bg2:#181818;--surface:#222;--surface2:#2a2a2a;--primary:#E85C2A;--primary-glow:rgba(232,92,42,.35);--accent:#F5A623;--text:#f2ede8;--muted:#9a938c;--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;--radius:16px;--transition:.32s cubic-bezier(.4,0,.2,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:var(--primary);transition:color var(--transition)}a:hover{color:var(--accent)}ul{list-style:none}nav.topnav{position:fixed;top:0;left:0;width:100%;z-index:9999;background:rgba(17,17,17,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.05)}nav.topnav .inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}.nav-logo{display:flex;align-items:center;gap:10px}.nav-logo img{height:46px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}.nav-logo span{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--text)}.nav-logo span b{color:var(--primary)}.nav-links{display:flex;gap:4px}.nav-links a{font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:7px 14px;border-radius:999px;transition:all var(--transition)}.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(232,92,42,.12)}.burger{display:none;background:none;border:none;cursor:pointer;padding:6px}.burger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:.3s}.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.burger.open span:nth-child(2){opacity:0}.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}.mobile-menu{display:none;position:fixed;inset:0;background:rgba(17,17,17,.97);backdrop-filter:blur(30px);z-index:9998;flex-direction:column;align-items:center;justify-content:center;gap:18px}.mobile-menu.open{display:flex}.mobile-menu a{font-family:var(--font-display);font-size:1.6rem;color:#fff;padding:8px 16px}.mobile-menu a:hover{color:var(--primary)}@media(max-width:900px){.nav-links{display:none}.burger{display:block}}.page-header{padding:140px 0 60px;text-align:center;background:var(--bg2);border-bottom:1px solid rgba(255,255,255,.05)}.page-header h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:700;margin-bottom:12px}.page-header h1 em{color:var(--primary);font-style:italic}.page-header p{color:var(--muted);font-size:1.05rem;max-width:520px;margin:0 auto}.container{max-width:1140px;margin:0 auto;padding:0 24px}.content{padding:64px 0 96px}.content h2{font-family:var(--font-display);font-size:1.8rem;margin-bottom:20px}.content h3{font-family:var(--font-display);font-size:1.3rem;color:var(--accent);margin:28px 0 12px}.content p{color:var(--muted);font-size:.95rem;line-height:1.7;margin-bottom:10px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px}
+    @media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
+    .contact-card{background:var(--surface);border:1px solid rgba(255,255,255,.05);border-radius:var(--radius);padding:32px;transition:all var(--transition)}
+    .contact-card:hover{border-color:rgba(232,92,42,.18);box-shadow:0 12px 36px rgba(0,0,0,.3)}
+    .contact-card h3{font-family:var(--font-display);font-size:1.3rem;color:var(--accent);margin-bottom:16px}
+    .contact-card p{color:var(--muted);font-size:.95rem;margin-bottom:10px}
+    .contact-card a{color:var(--text);font-weight:500}
+    .contact-card a:hover{color:var(--primary)}
+    .contact-card .icon{font-size:1.5rem;margin-bottom:12px}
+    .map-container{margin-top:32px;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.05)}
+    .map-container iframe{width:100%;height:350px;border:none}
+    .socials{display:flex;gap:12px;margin-top:16px}
+    .socials a{width:44px;height:44px;border-radius:12px;background:var(--surface2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1.1rem;transition:all var(--transition)}
+    .socials a:hover{background:var(--primary);color:#fff;transform:translateY(-3px);box-shadow:0 6px 18px var(--primary-glow)}
+    .back-link{display:inline-flex;align-items:center;gap:8px;margin-top:40px;font-weight:600;color:var(--primary);font-size:.9rem;padding:12px 24px;border:2px solid rgba(232,92,42,.3);border-radius:999px;transition:all var(--transition)}.back-link:hover{background:rgba(232,92,42,.1);border-color:var(--primary);color:#fff}footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:28px 0;text-align:center}footer p{font-size:.8rem;color:var(--muted)}footer a{color:var(--muted)}footer a:hover{color:var(--primary)}</style>
+</head>
+<body>
+<nav class="topnav"><div class="inner"><a href="../index.html" class="nav-logo"><img src="../img/logo-franver-porque.png" alt="Franver"><span>Pizzería <b>Franver</b></span></a><div class="nav-links"><a href="pizzas.html">Pizzas</a><a href="baguettes.html">Baguettes</a><a href="hamburguesas.html">Hamburguesas</a><a href="pollos.html">Pollos</a><a href="menus.html">Menús</a><a href="patatas.html">Patatas</a><a href="contacto.html" class="active">Contacto</a></div><button class="burger" onclick="this.classList.toggle('open');document.getElementById('mob').classList.toggle('open');" aria-label="Menú"><span></span><span></span><span></span></button></div></nav>
+<div class="mobile-menu" id="mob"><a href="pizzas.html">Pizzas</a><a href="baguettes.html">Baguettes</a><a href="hamburguesas.html">Hamburguesas</a><a href="pollos.html">Pollos</a><a href="sandwiches.html">Sandwiches</a><a href="ensaladas.html">Ensaladas</a><a href="menus.html">Menús</a><a href="patatas.html">Patatas</a><a href="compartir.html">Para Compartir</a><a href="contacto.html">Contacto</a></div>
+
+<header class="page-header"><div class="container">
+  <h1><em>Contacto</em></h1>
+  <p>Estamos aquí para atenderte. ¡Llámanos o visítanos!</p>
+</div></header>
+
+<main class="content"><div class="container">
+  <h2>Encuéntranos</h2>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="icon">📍</div>
+      <h3>Dirección</h3>
+      <p><strong>Avd. Madre Paula Montal 77</strong></p>
+      <p>Montequinto, Dos Hermanas<br>41089 Sevilla, España</p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">📞</div>
+      <h3>Teléfonos</h3>
+      <p><a href="tel:954129650" style="font-size:1.2rem;">954 12 96 50</a></p>
+      <p><a href="tel:954123750" style="font-size:1.2rem;">954 12 37 50</a></p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">🕐</div>
+      <h3>Horario</h3>
+      <p><strong>Lun · Mié · Jue:</strong> 20:30 — 00:00h</p>
+      <p><strong>Vie · Sáb · Dom · Festivos:</strong><br>13:00 — 16:30 y 20:30 — 00:30h</p>
+      <p style="color:var(--primary);font-weight:600;margin-top:8px;">Martes cerrado</p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">💬</div>
+      <h3>Redes Sociales</h3>
+      <p>Síguenos para las últimas novedades y ofertas.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/34954129650" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.2!2d-5.93!3d37.33!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDE5JzQ4LjAiTiA1wrA1NSc0OC4wIlc!5e0!3m2!1ses!2ses!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Pizzería Franver en Google Maps"></iframe>
+  </div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <p style="color:var(--muted);font-size:.9rem;">✉️ Email: <a href="mailto:info@pizzeriafranver.es">info@pizzeriafranver.es</a></p>
+  </div>
+
+  <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+</div></main>
+<footer><div class="container"><p>© 2025 Pizzería Franver S.L. · <a href="../index.html">Inicio</a></p></div></footer>
+</body>
+</html>
