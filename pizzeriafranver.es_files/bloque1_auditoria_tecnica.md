@@ -28,11 +28,16 @@ El objetivo principal de la web es **informar al cliente** sobre la carta, preci
 
 ### 1.3 Barreras identificadas para el User Persona
 
-1. **Acceso móvil deficiente**: La web tiene problemas de responsive que dificultan la navegación en smartphone
+1. **Acceso móvil deficiente**: La web tiene problemas de responsive que dificultan la navegación en smartphone Por ejemplo, tapando la aprte de hacer pedido online
+![alt text](image-4.png)
 2. **Información desordenada**: Los precios, ofertas y horarios se mezclan en un bloque extenso sin estructura clara
+![alt text](image-1.png)
 3. **Idioma inconsistente**: Secciones de la web aparecen en inglés ("Todays Special", "Nothing Found") lo que confunde al usuario español
+![alt text](image.png)
 4. **Botón de pedido poco visible**: El CTA principal ("Haz tu Pedido On Line") está rotado 270° en el lateral derecho, difícil de encontrar
+![alt text](image-2.png)
 5. **Sobrecarga cognitiva**: Múltiples ofertas, precios y condiciones se presentan simultáneamente sin jerarquía visual clara
+![alt text](image-3.png)
 
 ---
 
